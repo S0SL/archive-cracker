@@ -1,0 +1,61 @@
+# -*- mode: python ; coding: utf-8 -*-
+
+a = Analysis(
+    ['main.py'],
+    pathex=[],
+    binaries=[],
+    datas=[('fonts/simkai.ttf', 'fonts')],
+    hiddenimports=['win32timezone'],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=[],
+    excludes=[
+        # Kivy unused providers
+        'kivy.core.camera',
+        'kivy.core.video',
+        'kivy.core.audio',
+        'kivy.core.clipboard',
+        'kivy.core.spelling',
+        'kivy.core.image.img_dds',
+        'kivy.core.image.img_pil',
+        'kivy.core.image.img_ffpyplayer',
+        'kivy.core.video.video_ffmpeg',
+        'kivy.core.video.video_ffpyplayer',
+        'kivy.core.video.video_gstplayer',
+        'kivy.core.audio.audio_sdl2',
+        'kivy.core.audio.audio_avplayer',
+        'kivy.lib.gstplayer',
+        'kivy.lib.vidcore_lite',
+        # Unused third-party
+        'numpy',
+        'pandas',
+        'matplotlib',
+        'PIL',
+        'scipy',
+        'cv2',
+    ],
+    noarchive=False,
+    optimize=2,
+)
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name='ArchiveCracker',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=False,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+)

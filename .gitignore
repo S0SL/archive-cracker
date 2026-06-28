@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+
+# Build outputs
+build/
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Downloaded dictionaries cache
+dictionaries/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test artifacts
+__test_extract__/
+
+# Generated / personal wordlists
+target_wordlist.txt
+target_small.txt
+
+# PyInstaller output
+*.pkg
+
+# Font files (large binaries) - exclude except the one we need
+*.ttf
+*.ttc
+!archive_cracker/fonts/simkai.ttf
+
+# Binary / compiled
+*.exe
+*.dll
+*.jar
